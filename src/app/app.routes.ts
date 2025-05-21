@@ -18,6 +18,11 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./gifs/pages/trending-page/trending-page.component'),
       },
+      {
+        path: 'history/:query',
+        loadComponent: () =>
+          import('./gifs/pages/git-history-page/git-history-page.component'),
+      },
     ],
   },
   {

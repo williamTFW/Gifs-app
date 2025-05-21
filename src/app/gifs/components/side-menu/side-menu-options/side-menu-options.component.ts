@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { GifServices } from 'src/app/gifs/services/gifs.services';
 
 interface IMenuOptions {
   icon: string;
@@ -14,6 +15,8 @@ interface IMenuOptions {
   templateUrl: './side-menu-options.component.html',
 })
 export class SideMenuOptionsComponent {
+  gifsServices = inject(GifServices);
+
   menuOptions: IMenuOptions[] = [
     {
       icon: 'fa-solid fa-magnifying-glass',
